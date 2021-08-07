@@ -1,0 +1,63 @@
+.farmproducts {
+    margin-top: 3rem;
+    min-height: 100vh;
+    text-align: center;
+    background: linear-gradient(to right, $rojo 50%, $claro0 50%);
+
+    @include tablet{
+        max-height: 100vh;
+    }
+
+    @include laptop{
+        display: flex;
+        align-items: center;
+    }
+
+    &__texto {
+        @include laptop{
+            width: 50%;
+        }
+        h2 {
+            margin: 2rem 0;
+            font-family: $cursiva;
+            font-size: 5rem;
+            text-transform: capitalize;
+        }
+
+        p {
+            line-height: 2;
+
+            @include tablet{
+                max-width: 40rem;
+                width: 40%;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__imagenes{
+        @include tablet{
+            display: flex;
+            justify-content: space-around;
+        }
+        @include laptop{
+            flex-direction: column;        
+            width: 50%;
+        }
+        div{
+            
+            img{
+                margin-top: 1rem;
+                width: 90%;
+
+
+                @include tablet {
+                    width: 20rem;
+                }
+            }
+            
+        }
+    }
+
+
+}

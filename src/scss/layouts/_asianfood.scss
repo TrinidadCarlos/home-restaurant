@@ -1,0 +1,61 @@
+.asianFood{
+    padding: 1rem;
+    min-height: 100rem;
+    background:linear-gradient(to right, $claro0 50%, $naranja 50%) ;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content:flex-end ;
+    text-align:center ;
+
+    @include tablet{
+        min-height: 100vh;
+    }
+
+    @include laptop{
+        justify-content:flex-start ;
+    }
+    &__titulo{
+        font-family: $cursiva;
+        font-size: 5rem;
+        text-transform: capitalize;
+    }
+    p{
+        font-weight: $thin;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        line-height: 1.7;
+
+        @include tablet{
+            max-width: 30rem;
+            width: 50%;
+            margin: 2rem auto;
+        }
+    }
+
+}
+
+.asianFood__imagenes{
+    
+    @include tablet{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+    @include laptop{
+        align-items: center;
+    }
+    & > div{
+        @include tablet{
+            width: 48%;
+        }
+        @include laptop{
+            width: 30%;
+            max-width: 30rem;
+        }
+        img{
+            display: block;
+            margin-top: 1rem;
+        }
+    }
+
+}

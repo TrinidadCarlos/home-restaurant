@@ -1,0 +1,140 @@
+.intro{
+    @include tablet{
+        display: flex;
+    }
+    @include laptop{
+        max-width: 1300px;
+        min-height: 100vh;
+        justify-content: space-between;
+     }
+}
+.intro__seccion--uno{
+    position: relative;
+    z-index: 3;
+
+    @include tablet{
+        width: 65%;
+        height: auto;
+    }
+    @include laptop{
+        width: 55%;
+    }
+    .seccion__uno--imagen{
+        width: 80%;
+        margin: 0 auto;
+        @include tablet{
+            width: 50%;
+            background-color: red;
+            margin-left: 1rem;
+        }
+        img{
+            display: block;
+            width: 100%;
+            height: 35rem;
+            @include tablet {
+                width: 100%;
+                height: 20rem;
+            }
+        }
+    }
+
+    .seccion__uno--color-solido{
+        position: absolute;
+        bottom: -15%;
+        z-index: -1;
+        width: 100%;
+        height: 12rem;
+        background-color: $naranja;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        @include tablet{
+            height: 10rem;
+            top: 0;
+            bottom: initial;
+            align-items: flex-end;
+        }
+        h2{
+            margin: 7rem 0 1rem 0;
+            font-family: $cursiva;
+        font-size: 5rem;
+            @include tablet{
+                margin: 5rem 3rem 2rem 0;
+            }
+        }
+        ul{
+            border-bottom: 4rem solid $oscuro;
+            @include tablet{
+                width: 46%;
+                margin-left: 14rem;
+            }
+        }
+
+        li{
+            margin: .5rem 0;
+            text-transform: capitalize;
+            @include laptop{
+                margin: 1rem 0;
+            }
+            a{
+                display: block;
+                width: fit-content;
+                margin: 1rem auto 0 auto;
+                padding:.5rem 2rem;
+                text-transform: uppercase;
+                font-weight: $bold;
+                border:.2rem solid transparent;
+                border-radius: .3rem;
+                color: $oscuro;
+                background-color: $naranja;
+                transition: all .3s ease-in-out;
+                &:hover{
+                    background-color: transparent;
+                    border:.2rem solid $naranja;
+                }
+            }
+        }
+    }
+
+    
+}
+
+
+.intro__seccion--dos{
+    margin-top: 30rem;
+    min-height: 15rem;
+    position: relative;
+    @include tablet{
+        width: 35%;
+        height: auto;
+    }
+    @include laptop{
+        width: 45%;
+        margin-top: 15rem;
+    }
+    img{
+        display: block;
+        width: 90%;
+        margin: auto 0 auto;
+    }
+    .seccion__dos--color-solido{
+        background-color:$naranja;
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        bottom: 0;
+        z-index: -1;
+
+        @include tablet{
+            top: 0;
+            height: 40%;
+        }
+        @include tablet{
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            margin: auto;
+        }
+    }
+}

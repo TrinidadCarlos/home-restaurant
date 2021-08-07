@@ -1,0 +1,179 @@
+.webp .header{
+    background:$oscuro60 url('../img/chefs.webp') no-repeat center/cover;
+}
+.no-webp .header{
+    background: $oscuro60 url('./img/chefs.jpg') no-repeat center/cover; 
+}
+
+
+.header{
+    min-width:100%;
+    height: 100vh;
+    
+    .nav{
+        width: 100%;
+        position: fixed;
+        z-index:100;
+        min-height:5rem;
+        padding: 1rem;
+        background:$oscuro60;
+        display: flex;
+        justify-content: space-between;
+
+        @include tablet{
+            min-height: 4rem;
+        }
+        &__logo--inicio, &__logo--responsive{
+            width: 3rem;
+            img{
+                width: inherit;
+                filter: invert(1);
+
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+            
+        }
+        &__logo--responsive{
+            @include tablet{
+                display: none;
+            }
+        }
+
+        &__enlaces{
+            position: absolute;
+            top: 100%;
+            left: 0;
+            z-index: 100;
+            width: 90%;
+            height: calc(100vh - 6.25rem);
+            text-align: center;
+            display: flex;
+            flex-flow: column wrap;
+            justify-content: space-evenly;
+            background: $oscuro;
+            transition: all .4s ease-in-out;
+            transform:translateY(-150%);
+
+            @include tablet{
+                width: 70%;
+                position: initial;
+                transform: translateY(0);
+                justify-content: space-between;
+                flex-flow: row wrap;
+                align-items: center;
+                height: inherit;
+                background-color: initial;
+            }
+
+            @include desktop{
+                max-width: 60%;
+            }
+        }
+
+
+    }
+
+}
+.nav__enlaces{
+    li{
+        height: 15%;
+
+        @include tablet{
+            height: inherit;
+        }
+        a{
+            // font-family: $cursiva;
+            display: block;     
+            height: 100%;
+            display: grid;
+            place-content: center;
+            font-weight: $bold;
+            text-transform: capitalize;
+            font-size: 1.2rem;
+            color: $claro0;
+
+            &:hover{
+                border:.1rem solid $claro0;
+                @include tablet{
+                    border: none;
+                    border-bottom:.1rem solid $claro1;
+                }
+            }
+
+            @include tablet{
+                padding: .4rem;
+                font-size: initial;
+            }
+        }
+
+
+    }
+}
+
+.banner{
+    display: flex;
+    flex-flow: column wrap ;
+    justify-content: center;
+    height: calc(100vh - 6.25rem);
+    text-align: center;
+    color: $claro0;
+    
+    @include tablet{
+        margin-left:0;
+        max-width: 40rem;
+    }
+
+    &__titulo{
+        padding-bottom:1.5rem;
+        font-weight:$bold;
+
+        @include phone{
+            font-size: 3rem;
+        }
+        @include tablet{
+            font-size: 5rem;
+        }
+
+    }
+    &__texto{
+        font-weight: $bold;
+        line-height: 1.5;
+        @include tablet{
+            width: 80%;
+            margin: 0 auto;
+        }
+    }
+
+    &__enlace{
+        width:fit-content;
+        margin:1rem auto 0 auto ;
+        padding: 1rem;
+        color: $claro0;
+        border: .3rem solid $claro0;
+        border-radius: .2rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: $bold;
+        background-color: $oscuro60;
+        transition: all .3s ease;
+
+        &:hover{
+            background-color: $oscuro;
+        }
+    }
+}
+
+
+.toggle{
+    transform: translateY(0)!important;
+}
+.oscuro{
+    transition: all .5s ease;
+    background-color: $oscuro!important;
+
+}
+.no-scroll{
+    overflow: hidden;
+}

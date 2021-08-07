@@ -1,0 +1,135 @@
+.webp .contact {
+    background: $oscuro60 url('../img/contact.webp') no-repeat center/cover;
+}
+
+.no-webp .contact {
+    background: $oscuro60 url('../img/contact.jpg') no-repeat center/cover;
+}
+
+.contact {
+    margin-top: 2rem;
+    padding: 2rem 1rem;
+    // height: 100vh;
+
+    .contact__main {
+        margin: 0 auto;
+        @include tablet {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+
+
+    h2 {
+        text-align: center;
+        font-family: $cursiva;
+        font-size: 5rem;
+    }
+}
+
+.contact__form{
+    width: 90%;
+    margin: 0 auto;
+    padding: 1rem;
+    border-radius: .3rem;
+    background-color: $oscuro60;
+
+    @include tablet{
+        margin: 0;
+        max-width: 30rem;
+        width: 60%;
+        order:2;
+    }
+
+    .campos {
+        margin-bottom: 1rem;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        label {
+            display: block;
+            margin-bottom: .5rem;
+            font-weight: $bold;
+            color: $claro0;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            resize: none;
+        }
+    }
+
+    .submit {
+        input[type="submit"] {
+            width: 70%;
+            display: block;
+            margin: 0 auto;
+            padding: .5rem 1rem;
+            border: .2rem solid transparent;
+            border-radius: .3rem;
+            font-weight: $bold;
+            text-transform: uppercase;
+            background: $naranja;
+            color: $oscuro;
+            transition: all .3s ease-in-out;
+
+            @include tablet{
+                width: fit-content;
+            }
+
+            &:hover {
+                cursor: pointer;
+                color: $claro0;
+                border: .2rem solid $naranja;
+                background-color: transparent;
+            }
+        }
+
+    }
+}
+
+    .contact__icons {
+
+        margin-top: 2rem;
+        border-radius: .3rem;
+        background: $oscuro60;
+        padding: 1rem 0;
+
+        @include tablet{
+            width: 35%;
+            max-width: 30rem;
+            height: fit-content;
+            order:0;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+
+            img {
+                width: 2rem;
+                filter: invert(1);
+                transition: all .3s ease-in-out;
+
+                &:hover {
+                    transform: scale(1.2);
+                }
+            }
+        }
+
+        p {
+            margin: 1rem;
+            border-bottom: .1rem solid $claro0;
+            font-weight: $bold;
+            color: $claro0;
+
+            span {
+                font-weight: $thin;
+            }
+
+        }
+    }

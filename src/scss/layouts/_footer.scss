@@ -1,0 +1,19 @@
+.footer{
+    min-height: 10rem;
+    background: $oscuro;
+    color: $claro0; 
+    text-align: center;
+    display: grid;
+    place-content: center;
+
+    h3{
+        font-family: $cursiva;
+        font-size: 3rem;
+    }
+    p{
+        margin: 0 auto;
+        max-width: 40rem;
+        font-weight: $thin;
+        font-size: .8rem;
+    }
+}

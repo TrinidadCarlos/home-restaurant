@@ -1,0 +1,38 @@
+@import './variables';
+html{
+ box-sizing: border-box;   
+ font-family: 'Noto Serif KR', serif;
+ scroll-behavior: smooth;
+}
+*,*::after,*::before{
+    box-sizing: inherit;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+h1,h2,h3,h4, p{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+}
+.contenedor{
+    max-width: 75rem;//1200px
+    width: 90%;
+    margin: 0 auto;
+}
+.fondo-oscuro{
+    background-color: $oscuro60;
+}
+.fondo-claro{
+    background-color: $claro0;
+}
+.fondo-rojo{
+    background-color: $rojo;
+}

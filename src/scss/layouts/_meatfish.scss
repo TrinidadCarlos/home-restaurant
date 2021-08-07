@@ -1,0 +1,25 @@
+.meatfish{
+    margin-top: 3rem;
+    min-height: 100vh;
+    display: flex;
+    text-align: center;
+    flex-direction:column ;
+    justify-content: space-between;
+    background-color: $naranja;
+
+    h2{
+        margin: 2rem 0;
+        font-family: $cursiva;
+        font-size: 5rem;
+        text-transform: capitalize;
+    }
+
+    div{
+        img{
+            @include tablet{
+                max-width: 50rem;
+                width: 80%;
+            }
+        }
+    }
+}
